@@ -34,7 +34,6 @@ public class PerformanceMonitorAspect {
         if(executionTime >= properties.getTimeThreshold()){
             String methodName = joinPoint.getSignature().toLongString();
             logger.info(String.format("Method [%s] executed in [%d] ms", methodName, executionTime));
-            System.out.printf("Method [%s] executed in [%d] ms.%n", methodName, executionTime);
         }
 
         return result;
